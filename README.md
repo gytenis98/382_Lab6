@@ -5,6 +5,8 @@
 
 #Lab 6 - PWM - "Robot Motion"
 
+![LCD](https://raw.githubusercontent.com/gytenis98/382_Lab6/master/2014-12-03%2008.47.14.jpg?raw=true "LCD")
+
 ##Lab Overview
 
 This lab is designed to provide you with experience using the pulse-width modulation features of the MSP430. You will need to program the MSP430 to generate pulse-width-modulated waveforms to control the speed / direction of your robot's motors. In this lab, you will make your robot move forward, backwards, a small (< 45 degree) turn left/right, and a large (> 45 dgree) turn left/right.
