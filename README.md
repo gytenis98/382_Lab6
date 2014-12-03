@@ -1,5 +1,8 @@
 382_Lab6
 ========
+
+[Dr. York gave me a 1 lesson extension]
+
 Lab 6 - PWM - "Robot Motion"
 
 A Note On Robot Sharing
@@ -34,7 +37,6 @@ Prelab
 
 Include whatever information from this lab you think will be useful in creating your program.
 
-Note that the prelab is worth 15pts on this lab - allocate your efforts accordingly!
 
 Consider your hardware (timer subsystems, chip pinout, etc.) and how you will use it to achieve robot control. Which pins will output which signals you need? Which side of the motor will you attach these signals to? How will you use these signals to achieve forward / back / left / right movement? Spend some time here, as these decisions will dictate much of how difficult this lab is for you.
 
