@@ -3,21 +3,19 @@
 
 [Dr. York gave me a 1 lesson extension]
 
-Lab 6 - PWM - "Robot Motion"
+#Lab 6 - PWM - "Robot Motion"
 
-A Note On Robot Sharing
-
-Lab Overview
+##Lab Overview
 
 This lab is designed to provide you with experience using the pulse-width modulation features of the MSP430. You will need to program the MSP430 to generate pulse-width-modulated waveforms to control the speed / direction of your robot's motors. In this lab, you will make your robot move forward, backwards, a small (< 45 degree) turn left/right, and a large (> 45 dgree) turn left/right.
 
-Driving Motors
+##Driving Motors
 
 Our mobile robots have DC motors to drive the wheels. The amount of torque provided by the motor is directly proportional to the amount of voltage provided. Therefore, there are two ways of varying the speed of the DC motors:
 1.Provide an analog voltage where the magnitude is proportional to the output torque desired.
 2.Provide a PWM signal where the duty cycle provides an "average" voltage proportional to the output torque desired. This is shown in Figure 1.
 
-PWM to Motor
+##PWM to Motor
 
 Figure 1: The PWM signal creates a certain duty cycle which will provide an "average" voltage to the motor. This average voltage is proportional to the motor's output torque.
 
@@ -25,15 +23,15 @@ The motor can move in two directions. If you ground one terminal of the motor an
 
 You might want to program your robot so it turns like a tank; one wheel moves forward while the other one reverses. You will have to experiment with your robot to find out how long the PWM signal needs to be provided to turn an appropriate amount.
 
-Required Functionality [completed]
+##Required Functionality [completed]
 
 Demonstrate movement forward, backward, a small (< 45 degree) turn left and right, and a large (> 45 dgree) turn left and right. The robot should perform these movements sequentially, completely disconnected from a computer (no USB cord).
 
-A Functionality
+##A Functionality
 
 Control your robot with your remote! You should use at least four different buttons on the remote: one each to indicate motion directions of forward, backward, left, and right.
 
-Prelab
+##Prelab
 
 Include whatever information from this lab you think will be useful in creating your program.
 
@@ -46,9 +44,7 @@ Consider what additional hardware you'll need (regulator, motor driver chip, dec
 
 Consider the interface you'll want to create to your motors. Do you want to move each motor invidiually (moveLeftMotorForward())? Or do you want to move them together (moveRobotForward())?
 
-Notes
-
-Motor Control Suggestions
+##Motor Control Suggestions
 
 There are many ways to control your robot motors using the resources on the MSP430. I'm leaving this purposesly open-ended to see the creative approaches you come up with. Here are a few ideas to get your started:
 •Output four independent PWM signals - two for each motor◦Use RESET mode on the signals you want to ground
@@ -63,7 +59,7 @@ There are many ways to control your robot motors using the resources on the MSP4
 ◦You wouldn't have to worry about multiplexing and pin limitations on our packaging.
 
 
-Motor Driver Chip
+##Motor Driver Chip
 
 The robot motors require ~12V and a high amount of current b both of which would immediately burn out your microcontroller if it were directly connected to the motors. The motor driver chip (SN754410) takes a 5V input and produces a ~12V output. Each chip has up to four channels of 5V inputs (1A, 2A, 3A, and 4A) and four corresponding 12V outputs (1Y, 2Y, 3Y, and 4Y).
 
@@ -73,7 +69,7 @@ The motor driver chip can only supply 1A per circuit! Do not exceed that!
 
 You can test your 12V PWM motor driver chip output by connecting it to the oscilloscope. Do not use the logic analyzer for the 12V PWM signals!
 
-Motor Stall Current
+##Motor Stall Current
 
 To ensure you never exceed 1A drawn from your motor driver chip, you have to determine the worst-case current draw from your motors. This is called the motor stall current and usually occurs when your robot is pushing against an object it can't move (i.e. a wall) or switching directions quickly.
 
@@ -81,7 +77,7 @@ To measure motor stall current, connect your robot to a power supply in series w
 
 On my robot, the stall current does not go below one amp until my motor is being driven at 8V or less - roughly 60% duty cycle. Exceed this at your own risk!
 
-Decoupling Capacitors
+##Decoupling Capacitors
 
 The robot motors have the potential to create voltage fluctuations due to sudden spikes in current draw. They can also induce noise on the 5V line. This can cause your microcontroller to reset. To mitigate these fluctuations and noise, you'll need to use some capacitors:
 •One large capacitor (~100uF) across the 12V rail◦To supplement current when motor draw spikes
@@ -93,12 +89,12 @@ The robot motors have the potential to create voltage fluctuations due to sudden
 ◦If voltage drops, even briefly, it will reset your MCU
 
 
-How to Drive Your Motors
+##How to Drive Your Motors
 •You never want to send voltage to both motor terminals simultaneously. This will create a short in your motor driver chip and cause it to burn out.
 •Avoid sudden direction changes - these cause spikes in current draw by the motors.◦I often make both motor terminals low for ~10k clock cycles before switching direction.
 
 
-Breaking Parts
+##Breaking Parts
 
 You'll probably break parts on this lab - you'll know by the burning smell!
 
