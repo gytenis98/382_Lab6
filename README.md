@@ -9,6 +9,15 @@
 
 This lab is designed to provide you with experience using the pulse-width modulation features of the MSP430. You will need to program the MSP430 to generate pulse-width-modulated waveforms to control the speed / direction of your robot's motors. In this lab, you will make your robot move forward, backwards, a small (< 45 degree) turn left/right, and a large (> 45 dgree) turn left/right.
 
+Movement  | how
+------------- | -------------
+Move forward  | both wheels forward
+Move backward | both wheels backward
+Big left | left back, right forward
+Big right | right back, left forward
+small left | left STOP, right forward
+Small right | right STOP, left forward
+
 ##Driving Motors
 
 Our mobile robots have DC motors to drive the wheels. The amount of torque provided by the motor is directly proportional to the amount of voltage provided. Therefore, there are two ways of varying the speed of the DC motors:
