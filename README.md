@@ -40,11 +40,13 @@ You might want to program your robot so it turns like a tank; one wheel moves fo
 
 Demonstrate movement forward, backward, a small (< 45 degree) turn left and right, and a large (> 45 dgree) turn left and right. The robot should perform these movements sequentially, completely disconnected from a computer (no USB cord).
 
-##A Functionality
+##A Functionality [not completed]
 
 Control your robot with your remote! You should use at least four different buttons on the remote: one each to indicate motion directions of forward, backward, left, and right.
 
 ##Prelab
+
+![LCD](https://raw.githubusercontent.com/gytenis98/382_Lab6/master/2014-12-03%2008.49.14.jpg?raw=true "LCD")
 
 Include whatever information from this lab you think will be useful in creating your program.
 
