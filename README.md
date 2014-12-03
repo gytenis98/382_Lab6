@@ -24,6 +24,8 @@ Our mobile robots have DC motors to drive the wheels. The amount of torque provi
 1.Provide an analog voltage where the magnitude is proportional to the output torque desired.
 2.Provide a PWM signal where the duty cycle provides an "average" voltage proportional to the output torque desired. This is shown in Figure 1.
 
+![LCD](https://raw.githubusercontent.com/gytenis98/382_Lab6/master/pwm_to_motor.png?raw=true "LCD")
+
 ##PWM to Motor
 
 Figure 1: The PWM signal creates a certain duty cycle which will provide an "average" voltage to the motor. This average voltage is proportional to the motor's output torque.
