@@ -116,3 +116,10 @@ You'll probably break parts on this lab - you'll know by the burning smell!
 This will sometimes result in a short, causing you to burn out one of the fuses on the battery management board that protect the batteries. When the light on the battery goes from green to yellow, that means there's something wrong. Either the battery is dead or you've burned a fuse.
 
 To test whether a fuse is burned, use the ohmmeter - a working fuse should have very little resistance. You should turn off the power before you do this! You can also use a voltmeter - there shouldn't be much voltage drop across a working fuse. If you have burned a fuse, don't just replace it and try again - try to figure out what caused the fuse to burn in the first place! If you burned your motor driver chip, replace that - but also figure out why you burned it! If you don't fix the root cause, you'll just break more parts and cost yourself more time / frustration.
+
+##Testing and debugging
+At first MSP430 did not stay on after I disconnected the usb cable. It was a problem with my supply source but when I figured that the power wires was broken everything started to work. 
+For software part I mainly used code from lesson 32 powerpoint. The main thing I took from that lesson was that we need to use two different clocks. 
+For the robot moving part I had to adjust both clocks separately. It was frustrating at first but when I figured it out it was not that hard as it looked before. It took me a while to figure it out what exact times I need to use but it was mainly experiment and test game. It was more annoying than actually hard.
+
+When I figured out my times for the robot everything else was pretty much "edit software and look if it works".
