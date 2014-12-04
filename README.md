@@ -119,7 +119,12 @@ To test whether a fuse is burned, use the ohmmeter - a working fuse should have 
 
 ##Testing and debugging
 At first MSP430 did not stay on after I disconnected the usb cable. It was a problem with my supply source but when I figured that the power wires was broken everything started to work. 
+Dr. York helped me with oscilloscope set up so I could find where is the problem easier than checking everything. 
 For software part I mainly used code from lesson 32 powerpoint. The main thing I took from that lesson was that we need to use two different clocks. 
 For the robot moving part I had to adjust both clocks separately. It was frustrating at first but when I figured it out it was not that hard as it looked before. It took me a while to figure it out what exact times I need to use but it was mainly experiment and test game. It was more annoying than actually hard.
 
 When I figured out my times for the robot everything else was pretty much "edit software and look if it works".
+
+
+###Documentation
+Dr. Coulston helped me with my hardware set up. Dr. York helped me with oscilloscope set up and explained how we can use it to find out if it is hardware or software problem. 
